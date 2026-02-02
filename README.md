@@ -20,13 +20,13 @@ A lightweight, pixel-based automation tool that triggers keyboard actions based 
 
 \### Main Interface
 
-!\[Bot Window](bot.jpg)
+![Bot Window](bot.jpg)
 
 
 
 \### Configuration Guide
 
-!\[How to Set Up](window.jpg)
+![How to Set Up](window.jpg)
 
 
 
@@ -87,4 +87,5 @@ This project is licensed under the \*\*MIT License\*\*:
 \* You can use, copy, and modify the software.
 
 \* The software is provided "as is", without warranty of any kind.
+
 
