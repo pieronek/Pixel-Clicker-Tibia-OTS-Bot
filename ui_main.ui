@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pixel Key Trigger - Bot</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: #f0f0f0;
+}
+QGroupBox {
+	font-weight: bold;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	margin-top: 6px;
+	background-color: #ffffff;
+}
+QGroupBox::title {
+	subcontrol-origin: margin;
+	left: 10px;
+	padding: 0 5px;
+}
+QPushButton#btnStart {
+	background-color: #4CAF50;
+	color: white;
+	font-weight: bold;
+	border-radius: 4px;
+}
+QPushButton#btnStart:hover { background-color: #45a049; }
+QPushButton#btnStart:disabled { background-color: #cccccc; }
+
+QPushButton#btnStop {
+	background-color: #f44336;
+	color: white;
+	font-weight: bold;
+	border-radius: 4px;
+}
+QPushButton#btnStop:hover { background-color: #d32f2f; }
+QPushButton#btnStop:disabled { background-color: #cccccc; }</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+
+      <widget class="QWidget" name="tabMain">
+       <attribute name="title">
+        <string>Main</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layoutTabMain">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutMain">
+          <item>
+           <widget class="QGroupBox" name="grpVitals">
+            <property name="title">
+             <string>Status &amp; Reaction</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_1">
+             <property name="verticalSpacing">
+              <number>15</number>
+             </property>
+
+             <item row="0" column="2"><widget class="QLabel" name="lblHdr1"><property name="text"><string>Bind</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="font"><font><weight>75</weight><bold>true</bold></font></property></widget></item>
+             <item row="0" column="3"><widget class="QLabel" name="lblHdr2"><property name="text"><string>Pick</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="font"><font><weight>75</weight><bold>true</bold></font></property></widget></item>
+             <item row="0" column="4"><widget class="QLabel" name="lblHdr3"><property name="text"><string>X</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="font"><font><weight>75</weight><bold>true</bold></font></property></widget></item>
+             <item row="0" column="5"><widget class="QLabel" name="lblHdr4"><property name="text"><string>Y</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="font"><font><weight>75</weight><bold>true</bold></font></property></widget></item>
+
+             <item row="1" column="0"><widget class="QCheckBox" name="chk_hp_spell"><property name="text"><string></string></property></widget></item>
+             <item row="1" column="1"><widget class="QLabel" name="lbl_hp_spell"><property name="text"><string>HP Spell</string></property></widget></item>
+             <item row="1" column="2"><widget class="QComboBox" name="cmb_hp_spell"/></item>
+             <item row="1" column="3"><widget class="QPushButton" name="btnPick_hp_spell"><property name="text"><string>Pick</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property></widget></item>
+             <item row="1" column="4"><widget class="QSpinBox" name="spnX_hp_spell"><property name="maximum"><number>99999</number></property></widget></item>
+             <item row="1" column="5"><widget class="QSpinBox" name="spnY_hp_spell"><property name="maximum"><number>99999</number></property></widget></item>
+
+             <item row="2" column="0"><widget class="QCheckBox" name="chk_hp_pot"><property name="text"><string></string></property></widget></item>
+             <item row="2" column="1"><widget class="QLabel" name="lbl_hp_pot"><property name="text"><string>HP Potion</string></property></widget></item>
+             <item row="2" column="2"><widget class="QComboBox" name="cmb_hp_pot"/></item>
+             <item row="2" column="3"><widget class="QPushButton" name="btnPick_hp_pot"><property name="text"><string>Pick</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property></widget></item>
+             <item row="2" column="4"><widget class="QSpinBox" name="spnX_hp_pot"><property name="maximum"><number>99999</number></property></widget></item>
+             <item row="2" column="5"><widget class="QSpinBox" name="spnY_hp_pot"><property name="maximum"><number>99999</number></property></widget></item>
+
+             <item row="3" column="0"><widget class="QCheckBox" name="chk_mana_pot"><property name="text"><string></string></property></widget></item>
+             <item row="3" column="1"><widget class="QLabel" name="lbl_mana_pot"><property name="text"><string>Mana Potion</string></property></widget></item>
+             <item row="3" column="2"><widget class="QComboBox" name="cmb_mana_pot"/></item>
+             <item row="3" column="3"><widget class="QPushButton" name="btnPick_mana_pot"><property name="text"><string>Pick</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property></widget></item>
+             <item row="3" column="4"><widget class="QSpinBox" name="spnX_mana_pot"><property name="maximum"><number>99999</number></property></widget></item>
+             <item row="3" column="5"><widget class="QSpinBox" name="spnY_mana_pot"><property name="maximum"><number>99999</number></property></widget></item>
+
+             <item row="4" column="0"><widget class="QCheckBox" name="chk_mana_burn"><property name="text"><string></string></property></widget></item>
+             <item row="4" column="1"><widget class="QLabel" name="lbl_mana_burn"><property name="text"><string>Mana Burn</string></property></widget></item>
+             <item row="4" column="2"><widget class="QComboBox" name="cmb_mana_burn"/></item>
+             <item row="4" column="3"><widget class="QPushButton" name="btnPick_mana_burn"><property name="text"><string>Pick</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property></widget></item>
+             <item row="4" column="4"><widget class="QSpinBox" name="spnX_mana_burn"><property name="maximum"><number>99999</number></property></widget></item>
+             <item row="4" column="5"><widget class="QSpinBox" name="spnY_mana_burn"><property name="maximum"><number>99999</number></property></widget></item>
+
+             <item row="5" column="0"><spacer name="verticalSpacerLeft"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property></spacer></item>
+            </layout>
+           </widget>
+          </item>
+
+          <item>
+           <widget class="QGroupBox" name="grpTimed">
+            <property name="title">
+             <string>Timed Rotation</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <property name="verticalSpacing">
+              <number>15</number>
+             </property>
+
+             <item row="0" column="2"><widget class="QLabel" name="lblHdr5"><property name="text"><string>Bind</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="font"><font><weight>75</weight><bold>true</bold></font></property></widget></item>
+             <item row="0" column="3"><widget class="QLabel" name="lblHdr7"><property name="text"><string>CD (s)</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="font"><font><weight>75</weight><bold>true</bold></font></property></widget></item>
+
+             <item row="1" column="0"><widget class="QCheckBox" name="chk_timed1"><property name="text"><string></string></property></widget></item>
+             <item row="1" column="1"><widget class="QLabel" name="lbl_timed1"><property name="text"><string>Timed Spell 1</string></property></widget></item>
+             <item row="1" column="2"><widget class="QComboBox" name="cmb_timed1"/></item>
+             <item row="1" column="3"><widget class="QSpinBox" name="spnCd_timed1"><property name="suffix"><string> s</string></property><property name="maximum"><number>9999</number></property></widget></item>
+
+             <item row="2" column="0"><widget class="QCheckBox" name="chk_timed2"><property name="text"><string></string></property></widget></item>
+             <item row="2" column="1"><widget class="QLabel" name="lbl_timed2"><property name="text"><string>Timed Spell 2</string></property></widget></item>
+             <item row="2" column="2"><widget class="QComboBox" name="cmb_timed2"/></item>
+             <item row="2" column="3"><widget class="QSpinBox" name="spnCd_timed2"><property name="suffix"><string> s</string></property><property name="maximum"><number>9999</number></property></widget></item>
+
+             <item row="3" column="0"><widget class="QCheckBox" name="chk_timed3"><property name="text"><string></string></property></widget></item>
+             <item row="3" column="1"><widget class="QLabel" name="lbl_timed3"><property name="text"><string>Timed Spell 3</string></property></widget></item>
+             <item row="3" column="2"><widget class="QComboBox" name="cmb_timed3"/></item>
+             <item row="3" column="3"><widget class="QSpinBox" name="spnCd_timed3"><property name="suffix"><string> s</string></property><property name="maximum"><number>9999</number></property></widget></item>
+
+             <item row="4" column="0"><widget class="QCheckBox" name="chk_food"><property name="text"><string></string></property></widget></item>
+             <item row="4" column="1"><widget class="QLabel" name="lbl_food"><property name="text"><string>Food</string></property></widget></item>
+             <item row="4" column="2"><widget class="QComboBox" name="cmb_food"/></item>
+             <item row="4" column="3"><widget class="QSpinBox" name="spnCd_food"><property name="suffix"><string> s</string></property><property name="maximum"><number>9999</number></property></widget></item>
+
+             <item row="5" column="0"><spacer name="verticalSpacerRight"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property></spacer></item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+
+        <item>
+         <widget class="QFrame" name="frameControls">
+          <property name="frameShape"><enum>QFrame::StyledPanel</enum></property>
+          <property name="frameShadow"><enum>QFrame::Raised</enum></property>
+          <property name="styleSheet"><string>QFrame { background: #e0e0e0; border-radius: 8px; padding: 10px; }</string></property>
+          <layout class="QHBoxLayout" name="horizontalLayoutBottom">
+
+           <item>
+            <widget class="QLabel" name="lblTimer">
+             <property name="text"><string>Timer:</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spnTimerMs">
+             <property name="suffix"><string> ms</string></property>
+             <property name="minimum"><number>10</number></property>
+             <property name="maximum"><number>60000</number></property>
+             <property name="value"><number>1000</number></property>
+             <property name="minimumWidth"><number>80</number></property>
+            </widget>
+           </item>
+
+           <item>
+            <spacer name="spacerBottom1">
+             <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            </spacer>
+           </item>
+
+           <item>
+            <widget class="QPushButton" name="btnStart">
+             <property name="text"><string>START</string></property>
+             <property name="minimumSize"><size><width>120</width><height>40</height></size></property>
+             <property name="font"><font><pointSize>10</pointSize><weight>75</weight><bold>true</bold></font></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnStop">
+             <property name="text"><string>STOP</string></property>
+             <property name="minimumSize"><size><width>120</width><height>40</height></size></property>
+             <property name="font"><font><pointSize>10</pointSize><weight>75</weight><bold>true</bold></font></property>
+            </widget>
+           </item>
+
+           <item>
+            <spacer name="spacerBottom2">
+             <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            </spacer>
+           </item>
+
+           <item>
+            <layout class="QVBoxLayout" name="layoutFileBtns">
+             <item>
+              <widget class="QPushButton" name="btnSave">
+               <property name="text"><string>Save</string></property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnLoad">
+               <property name="text"><string>Load</string></property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QLabel" name="lblStatus">
+          <property name="text"><string>Status: idle</string></property>
+          <property name="styleSheet"><string>color: #555; font-style: italic; margin-left: 5px;</string></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="tabSpells">
+       <attribute name="title">
+        <string>Spells CDs</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layoutTabSpells">
+        <item>
+         <widget class="QTextEdit" name="txtSpellsCds">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="tabHowTo">
+       <attribute name="title">
+        <string>How to</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layoutTabHowTo">
+        <item>
+         <widget class="QTextEdit" name="txtHowTo">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
