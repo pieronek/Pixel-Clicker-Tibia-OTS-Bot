@@ -20,13 +20,13 @@ Lekkie narzędzie do automatyzacji, które naciska klawisze na podstawie koloru 
 
 \### Interfejs Programu
 
-!\[Okno Bota](bot.jpg)
+![Okno Bota](bot.jpg)
 
 
 
 \### Instrukcja Konfiguracji
 
-!\[Jak ustawić](window.jpg)
+![Jak ustawić](window.jpg)
 
 
 
@@ -87,4 +87,5 @@ Projekt jest udostępniany na licencji \*\*MIT\*\*:
 \* Możesz dowolnie korzystać, kopiować i modyfikować kod.
 
 \* Oprogramowanie jest dostarczane w stanie "takim, jakie jest", bez żadnych gwarancji.
+
 
