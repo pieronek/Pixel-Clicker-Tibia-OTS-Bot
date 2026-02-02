@@ -7,7 +7,7 @@
 
 
 Just download .exe file and use as is "how-to" section, no need to install anything
-
+It's in release section on right side
 
 
 A lightweight, pixel-based automation tool that triggers keyboard actions based on screen color detection. Perfect for health management and rotation automation in various applications.
@@ -87,5 +87,6 @@ This project is licensed under the \*\*MIT License\*\*:
 \* You can use, copy, and modify the software.
 
 \* The software is provided "as is", without warranty of any kind.
+
 
 
