@@ -7,7 +7,7 @@
 
 
 Nie ma potrzeby pobierania wszystkiego - tylko plik exe i używać zgodnie z opisem
-
+Jest po prawej stronie w sekcji Released
 
 
 Lekkie narzędzie do automatyzacji, które naciska klawisze na podstawie koloru pikseli na ekranie. Idealne do zarządzania życiem i maną oraz automatyzacji rotacji.
@@ -87,5 +87,6 @@ Projekt jest udostępniany na licencji \*\*MIT\*\*:
 \* Możesz dowolnie korzystać, kopiować i modyfikować kod.
 
 \* Oprogramowanie jest dostarczane w stanie "takim, jakie jest", bez żadnych gwarancji.
+
 
 
